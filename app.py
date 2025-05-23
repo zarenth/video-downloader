@@ -9,7 +9,13 @@ YDL_OPTIONS = {
     'skip_download': True,
     'nocheckcertificate': True,
     'ignoreerrors': True,
+    'force_generic_extractor': False,
+    'geo_bypass': True,
+    'http_headers': {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'
+    }
 }
+
 
 @app.route("/info", methods=["GET"])
 def get_video_info():
